@@ -1,4 +1,5 @@
 require 'redmon/helpers'
+require 'redmon/authentication'
 
 module Redmon
   class App < Sinatra::Base
@@ -7,7 +8,8 @@ module Redmon
       root: "#{root}/public",
       cache_control: 'public, max-age=3600'
     }
-
+    
+    extend  Redmon::Authentication
     helpers Redmon::Helpers
 
     get '/' do

@@ -52,9 +52,10 @@ module Redmon
   def [](option)
     opts[option]
   end
-
+  
 end
 
+require 'redmon/authentication'
 require 'redmon/redis'
 require 'redmon/helpers'
 require 'redmon/app'
